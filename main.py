@@ -7,7 +7,7 @@ app = Flask(__name__)
 ser = serial.Serial('/dev/ttyACM0',9600)
 ser.flushInput()
 
-@app.route('/led/encender',methods=['POST'])
+@app.route('/led/encender',methods=['GET'])
 def save_encenderLed():
     data = "encendido"
     message = data.encode('latin-1')
